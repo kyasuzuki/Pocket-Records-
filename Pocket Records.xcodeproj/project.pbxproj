@@ -14,6 +14,13 @@
 		09125C641F0446AF00C3AE5C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09125C621F0446AF00C3AE5C /* LaunchScreen.storyboard */; };
 		09125C6F1F0446AF00C3AE5C /* Pocket_RecordsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09125C6E1F0446AF00C3AE5C /* Pocket_RecordsTests.swift */; };
 		09125C7A1F0446AF00C3AE5C /* Pocket_RecordsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09125C791F0446AF00C3AE5C /* Pocket_RecordsUITests.swift */; };
+		09125C891F0446D400C3AE5C /* TimeForUs.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 09125C881F0446D400C3AE5C /* TimeForUs.mp3 */; };
+		09125C8B1F04575500C3AE5C /* SongPlayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09125C8A1F04575500C3AE5C /* SongPlayViewController.swift */; };
+		09125C8D1F04576900C3AE5C /* SongListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09125C8C1F04576900C3AE5C /* SongListViewController.swift */; };
+		09125C8F1F0566B000C3AE5C /* LittleHollywood.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 09125C8E1F0566AF00C3AE5C /* LittleHollywood.mp3 */; };
+		09125C911F05677600C3AE5C /* Love$ick.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 09125C901F05677600C3AE5C /* Love$ick.mp3 */; };
+		09125C931F05761A00C3AE5C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 09125C921F05761A00C3AE5C /* Images.xcassets */; };
+		09546EA81F088AD60047DCE9 /* CanvasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09546EA71F088AD60047DCE9 /* CanvasViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +54,13 @@
 		09125C751F0446AF00C3AE5C /* Pocket RecordsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Pocket RecordsUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		09125C791F0446AF00C3AE5C /* Pocket_RecordsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pocket_RecordsUITests.swift; sourceTree = "<group>"; };
 		09125C7B1F0446AF00C3AE5C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		09125C881F0446D400C3AE5C /* TimeForUs.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = TimeForUs.mp3; sourceTree = "<group>"; };
+		09125C8A1F04575500C3AE5C /* SongPlayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SongPlayViewController.swift; sourceTree = "<group>"; };
+		09125C8C1F04576900C3AE5C /* SongListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SongListViewController.swift; sourceTree = "<group>"; };
+		09125C8E1F0566AF00C3AE5C /* LittleHollywood.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = LittleHollywood.mp3; sourceTree = "<group>"; };
+		09125C901F05677600C3AE5C /* Love$ick.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Love$ick.mp3; sourceTree = "<group>"; };
+		09125C921F05761A00C3AE5C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		09546EA71F088AD60047DCE9 /* CanvasViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CanvasViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,12 +111,17 @@
 		09125C581F0446AF00C3AE5C /* Pocket Records */ = {
 			isa = PBXGroup;
 			children = (
+				09125C871F0446BF00C3AE5C /* Music */,
 				09125C591F0446AF00C3AE5C /* AppDelegate.swift */,
 				09125C5B1F0446AF00C3AE5C /* ViewController.swift */,
 				09125C5D1F0446AF00C3AE5C /* Main.storyboard */,
 				09125C601F0446AF00C3AE5C /* Assets.xcassets */,
 				09125C621F0446AF00C3AE5C /* LaunchScreen.storyboard */,
 				09125C651F0446AF00C3AE5C /* Info.plist */,
+				09125C8A1F04575500C3AE5C /* SongPlayViewController.swift */,
+				09125C8C1F04576900C3AE5C /* SongListViewController.swift */,
+				09125C921F05761A00C3AE5C /* Images.xcassets */,
+				09546EA71F088AD60047DCE9 /* CanvasViewController.swift */,
 			);
 			path = "Pocket Records";
 			sourceTree = "<group>";
@@ -123,6 +142,16 @@
 				09125C7B1F0446AF00C3AE5C /* Info.plist */,
 			);
 			path = "Pocket RecordsUITests";
+			sourceTree = "<group>";
+		};
+		09125C871F0446BF00C3AE5C /* Music */ = {
+			isa = PBXGroup;
+			children = (
+				09125C881F0446D400C3AE5C /* TimeForUs.mp3 */,
+				09125C8E1F0566AF00C3AE5C /* LittleHollywood.mp3 */,
+				09125C901F05677600C3AE5C /* Love$ick.mp3 */,
+			);
+			name = Music;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -232,7 +261,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				09125C8F1F0566B000C3AE5C /* LittleHollywood.mp3 in Resources */,
+				09125C891F0446D400C3AE5C /* TimeForUs.mp3 in Resources */,
+				09125C931F05761A00C3AE5C /* Images.xcassets in Resources */,
 				09125C641F0446AF00C3AE5C /* LaunchScreen.storyboard in Resources */,
+				09125C911F05677600C3AE5C /* Love$ick.mp3 in Resources */,
 				09125C611F0446AF00C3AE5C /* Assets.xcassets in Resources */,
 				09125C5F1F0446AF00C3AE5C /* Main.storyboard in Resources */,
 			);
@@ -260,7 +293,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				09125C5C1F0446AF00C3AE5C /* ViewController.swift in Sources */,
+				09125C8D1F04576900C3AE5C /* SongListViewController.swift in Sources */,
 				09125C5A1F0446AF00C3AE5C /* AppDelegate.swift in Sources */,
+				09546EA81F088AD60047DCE9 /* CanvasViewController.swift in Sources */,
+				09125C8B1F04575500C3AE5C /* SongPlayViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -507,6 +543,7 @@
 				09125C801F0446AF00C3AE5C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		09125C811F0446AF00C3AE5C /* Build configuration list for PBXNativeTarget "Pocket RecordsTests" */ = {
 			isa = XCConfigurationList;
@@ -515,6 +552,7 @@
 				09125C831F0446AF00C3AE5C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		09125C841F0446AF00C3AE5C /* Build configuration list for PBXNativeTarget "Pocket RecordsUITests" */ = {
 			isa = XCConfigurationList;
@@ -523,6 +561,7 @@
 				09125C861F0446AF00C3AE5C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
