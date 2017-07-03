@@ -9,6 +9,9 @@
 import UIKit
 
 class SongListViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+    
+    private var shadowImageView: UIImageView?
+    
 
     // my tableView
     @IBOutlet weak var songList: UITableView!
@@ -95,6 +98,36 @@ class SongListViewController: UIViewController, UITableViewDataSource, UITableVi
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let songPlayView:SongPlayViewController = segue.destination as! SongPlayViewController
         songPlayView.navigationItem.title =  data[songList.indexPathForSelectedRow!.row]
+    }
+    
+    // gets rid of hairline border line on navigation bar
+    private func findShadowImage(under view: UIView) -> UIImageView? {
+        if view is UIImageView && view.bounds.size.height <= 1 {
+            return (view as! UIImageView)
+        }
+        
+        for subview in view.subviews {
+            if let imageView = findShadowImage(under: subview) {
+                return imageView
+            }
+        }
+        return nil
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        if shadowImageView == nil {
+            shadowImageView = findShadowImage(under: navigationController!.navigationBar)
+        }
+        shadowImageView?.isHidden = true
+        navigationController?.navigationBar.barTintColor = UIColor .white
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        shadowImageView?.isHidden = false
     }
     
     override func didReceiveMemoryWarning() {

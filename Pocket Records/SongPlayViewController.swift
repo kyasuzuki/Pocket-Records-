@@ -16,7 +16,37 @@ class SongPlayViewController: UIViewController {
     }
     @IBOutlet weak var recordImage: UIImageView!
     
- 
+    // get rid of hairline border for navigation bar
+    private var shadowImageView: UIImageView?
+
+    private func findShadowImage(under view: UIView) -> UIImageView? {
+        if view is UIImageView && view.bounds.size.height <= 1 {
+            return (view as! UIImageView)
+        }
+        
+        for subview in view.subviews {
+            if let imageView = findShadowImage(under: subview) {
+                return imageView
+            }
+        }
+        return nil
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        if shadowImageView == nil {
+            shadowImageView = findShadowImage(under: navigationController!.navigationBar)
+        }
+        shadowImageView?.isHidden = true
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        shadowImageView?.isHidden = false
+    }
+
     
     var audioPlayer: AVAudioPlayer! = nil
     

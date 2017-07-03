@@ -149,7 +149,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NlV-aY-Ew6">
-                                <rect key="frame" x="16" y="617" width="75" height="30"/>
+                                <rect key="frame" x="16" y="528" width="75" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="My Canvas"/>
                                 <connections>
@@ -183,29 +183,9 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2Wn-1g-Zwj">
                                 <rect key="frame" x="0.0" y="58" width="375" height="609"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="X87-OO-2a0">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XDV-lm-Sdn">
-                                <rect key="frame" x="10" y="10" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3sK-LY-Q7X">
-                                <rect key="frame" x="0.0" y="64" width="156" height="47"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="156" id="z5D-Kh-6aW"/>
-                                </constraints>
-                                <connections>
-                                    <outlet property="dataSource" destination="EZL-K6-WVZ" id="WaV-Wo-yWR"/>
-                                </connections>
-                            </pickerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="3sK-LY-Q7X" firstAttribute="top" secondItem="jm2-md-wWa" secondAttribute="bottom" id="1Ma-KV-Qh7"/>
-                            <constraint firstItem="CXL-ev-42S" firstAttribute="top" secondItem="3sK-LY-Q7X" secondAttribute="bottom" constant="556" id="97Z-MS-Scu"/>
-                            <constraint firstItem="3sK-LY-Q7X" firstAttribute="leading" secondItem="2Wn-1g-Zwj" secondAttribute="leading" id="Dzb-As-Kgf"/>
                             <constraint firstAttribute="trailing" secondItem="2Wn-1g-Zwj" secondAttribute="trailing" id="UW9-Sp-FmZ"/>
                             <constraint firstItem="2Wn-1g-Zwj" firstAttribute="leading" secondItem="0sd-TM-JvN" secondAttribute="leading" id="YXJ-LZ-tCE"/>
                             <constraint firstItem="2Wn-1g-Zwj" firstAttribute="top" secondItem="0sd-TM-JvN" secondAttribute="topMargin" constant="58" id="ibv-jG-P9k"/>
@@ -213,9 +193,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="drawPicker" destination="3sK-LY-Q7X" id="Xdw-qi-8Yx"/>
                         <outlet property="myCanvasView" destination="2Wn-1g-Zwj" id="rVJ-HE-PfE"/>
-                        <outlet property="tempView" destination="X87-OO-2a0" id="QR1-nW-uld"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HoA-LX-XMQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
