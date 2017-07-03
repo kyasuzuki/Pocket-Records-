@@ -12,9 +12,10 @@ import AVFoundation
 class SongPlayViewController: UIViewController {
     
     @IBAction func myCanvasButton(_ sender: UIButton) {
-        
     }
-    @IBOutlet weak var recordImage: UIImageView!
+    
+    
+        @IBOutlet weak var recordImage: UIImageView!
     
     // get rid of hairline border for navigation bar
     private var shadowImageView: UIImageView?

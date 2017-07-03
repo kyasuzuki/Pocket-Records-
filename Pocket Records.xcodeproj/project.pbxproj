@@ -222,6 +222,7 @@
 				TargetAttributes = {
 					09125C551F0446AF00C3AE5C = {
 						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = GW257BVF78;
 						ProvisioningStyle = Automatic;
 					};
 					09125C691F0446AF00C3AE5C = {
@@ -450,7 +451,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = GW257BVF78;
 				INFOPLIST_FILE = "Pocket Records/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "test.Pocket-Records";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -462,7 +465,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = GW257BVF78;
 				INFOPLIST_FILE = "Pocket Records/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "test.Pocket-Records";
 				PRODUCT_NAME = "$(TARGET_NAME)";

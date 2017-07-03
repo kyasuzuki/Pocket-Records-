@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Pocket Records/SongPlayViewController.swift"
-            timestampString = "520738156.557568"
+            timestampString = "520798443.567804"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "53"
-            endingLineNumber = "53"
+            startingLineNumber = "54"
+            endingLineNumber = "54"
             landmarkName = "viewDidLoad()"
             landmarkType = "7">
          </BreakpointContent>
@@ -65,6 +65,194 @@
             endingLineNumber = "14"
             landmarkName = "CanvasViewController"
             landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Pocket Records/SongListViewController.swift"
+            timestampString = "520752872.844325"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "32"
+            endingLineNumber = "32"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Pocket Records/CanvasViewController.swift"
+            timestampString = "520797576.765048"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "47"
+            endingLineNumber = "47"
+            landmarkName = "imagePickerController(picker:didFinishPickingMediaWithInfo:)"
+            landmarkType = "9">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Pocket Records/SongPlayViewController.swift"
+            timestampString = "520798443.567804"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "18"
+            endingLineNumber = "18"
+            landmarkName = "SongPlayViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Pocket_Records.SongPlayViewController.recordImage.getter : weak Swift.ImplicitlyUnwrappedOptional&lt;__ObjC.UIImageView&gt;"
+                  moduleName = "Pocket Records"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kya/Desktop/IOS%20practice/Pocket%20Records/Pocket%20Records/SongPlayViewController.swift"
+                  timestampString = "520798445.604616"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "18"
+                  endingLineNumber = "18"
+                  offsetFromSymbolStart = "27">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Pocket_Records.SongPlayViewController.recordImage.setter : weak Swift.ImplicitlyUnwrappedOptional&lt;__ObjC.UIImageView&gt;"
+                  moduleName = "Pocket Records"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kya/Desktop/IOS%20practice/Pocket%20Records/Pocket%20Records/SongPlayViewController.swift"
+                  timestampString = "520798445.613153"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "18"
+                  endingLineNumber = "18"
+                  offsetFromSymbolStart = "42">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Pocket_Records.SongPlayViewController.init (nibName : Swift.Optional&lt;Swift.String&gt;, bundle : Swift.Optional&lt;__ObjC.Bundle&gt;) -&gt; Pocket_Records.SongPlayViewController"
+                  moduleName = "Pocket Records"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kya/Desktop/IOS%20practice/Pocket%20Records/Pocket%20Records/SongPlayViewController.swift"
+                  timestampString = "520798445.61618"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "18"
+                  endingLineNumber = "18"
+                  offsetFromSymbolStart = "70">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Pocket_Records.SongPlayViewController.init (coder : __ObjC.NSCoder) -&gt; Swift.Optional&lt;Pocket_Records.SongPlayViewController&gt;"
+                  moduleName = "Pocket Records"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kya/Desktop/IOS%20practice/Pocket%20Records/Pocket%20Records/SongPlayViewController.swift"
+                  timestampString = "520798445.618754"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "18"
+                  endingLineNumber = "18"
+                  offsetFromSymbolStart = "31">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Pocket Records/AppDelegate.swift"
+            timestampString = "520798863.792065"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "12"
+            endingLineNumber = "12"
+            landmarkName = "AppDelegate"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Pocket_Records.AppDelegate.__deallocating_deinit"
+                  moduleName = "Pocket Records"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kya/Desktop/IOS%20practice/Pocket%20Records/Pocket%20Records/AppDelegate.swift"
+                  timestampString = "520798863.832268"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "4">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Pocket_Records.AppDelegate.init () -&gt; Pocket_Records.AppDelegate"
+                  moduleName = "Pocket Records"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kya/Desktop/IOS%20practice/Pocket%20Records/Pocket%20Records/AppDelegate.swift"
+                  timestampString = "520798863.837154"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "24">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Pocket_Records.AppDelegate.__allocating_init () -&gt; Pocket_Records.AppDelegate"
+                  moduleName = "Pocket Records"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kya/Desktop/IOS%20practice/Pocket%20Records/Pocket%20Records/AppDelegate.swift"
+                  timestampString = "520798863.840775"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "4">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "main"
+                  moduleName = "Pocket Records"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kya/Desktop/IOS%20practice/Pocket%20Records/Pocket%20Records/AppDelegate.swift"
+                  timestampString = "520798863.845682"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "12"
+                  endingLineNumber = "12"
+                  offsetFromSymbolStart = "4">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
