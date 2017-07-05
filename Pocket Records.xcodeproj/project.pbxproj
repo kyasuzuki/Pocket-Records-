@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		090873721F0D3565002225D2 /* CameraHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 090873711F0D3565002225D2 /* CameraHandler.swift */; };
 		09125C5A1F0446AF00C3AE5C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09125C591F0446AF00C3AE5C /* AppDelegate.swift */; };
 		09125C5C1F0446AF00C3AE5C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09125C5B1F0446AF00C3AE5C /* ViewController.swift */; };
 		09125C5F1F0446AF00C3AE5C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09125C5D1F0446AF00C3AE5C /* Main.storyboard */; };
@@ -41,6 +42,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		090873711F0D3565002225D2 /* CameraHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraHandler.swift; sourceTree = "<group>"; };
 		09125C561F0446AF00C3AE5C /* Pocket Records.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pocket Records.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		09125C591F0446AF00C3AE5C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		09125C5B1F0446AF00C3AE5C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -122,6 +124,7 @@
 				09125C8C1F04576900C3AE5C /* SongListViewController.swift */,
 				09125C921F05761A00C3AE5C /* Images.xcassets */,
 				09546EA71F088AD60047DCE9 /* CanvasViewController.swift */,
+				090873711F0D3565002225D2 /* CameraHandler.swift */,
 			);
 			path = "Pocket Records";
 			sourceTree = "<group>";
@@ -295,6 +298,7 @@
 			files = (
 				09125C5C1F0446AF00C3AE5C /* ViewController.swift in Sources */,
 				09125C8D1F04576900C3AE5C /* SongListViewController.swift in Sources */,
+				090873721F0D3565002225D2 /* CameraHandler.swift in Sources */,
 				09125C5A1F0446AF00C3AE5C /* AppDelegate.swift in Sources */,
 				09546EA81F088AD60047DCE9 /* CanvasViewController.swift in Sources */,
 				09125C8B1F04575500C3AE5C /* SongPlayViewController.swift in Sources */,

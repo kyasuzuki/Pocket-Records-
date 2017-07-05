@@ -12,57 +12,40 @@ class CanvasViewController: UIViewController, UIImagePickerControllerDelegate, U
     
     let alertController = UIAlertController()
     
-
     @IBOutlet weak var myImageView: UIImageView!
     
-    
     @IBAction func cameraButton(_ sender: UIButton) {
-        cameraOptionPopup()
+        cameraPopup()
     }
     
-    func cameraOptionPopup(){
-        //Creating UIAlertController and
+    func cameraPopup() {
+        let camera = CameraHandler(delegate_: self)
+        let optionMenu = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
+        optionMenu.popoverPresentationController?.sourceView = self.view
         
-        //the confirm action taking the inputs
-        let cameraAction = UIAlertAction(title: "Open Camera", style: .default) { (UIAlertAction) in
-             // this is called when the user presses the Camera button
-            let picker = UIImagePickerController()
-            picker.delegate = self
-            picker.sourceType = .camera
-            self.present(picker, animated: true, completion: nil)
+        let takePhoto = UIAlertAction(title: "Take Photo", style: .default) { (alert : UIAlertAction!) in
+            camera.getCameraOn(self, canEdit: true)
         }
-        
-        let libraryAction = UIAlertAction(title: "Open Photo Library", style: .default) { (UIAlertAction) in
-            // this is called when the user presses the Photo Library button
-            let picker = UIImagePickerController()
-            picker.delegate = self
-            picker.sourceType = UIImagePickerControllerSourceType.photoLibrary
-            picker.allowsEditing = false
-            
-            self.present(picker, animated: true, completion: nil)
+        let sharePhoto = UIAlertAction(title: "Photo Library", style: .default) { (alert : UIAlertAction!) in
+            camera.getPhotoLibraryOn(self, canEdit: true)
         }
-        
-        func imagePickerController(picker:UIImagePickerController, didFinishPickingMediaWithInfo info:[String:AnyObject])
-        {
-            if let picker = info[UIImagePickerControllerOriginalImage] as? UIImage{
-                myImageView.image = picker
-            }
-            self.dismiss(animated: true, completion: nil)
-            
-            
-//            myCanvasView.image = info[UIImagePickerControllerOriginalImage] as? UIImage; dismiss(animated: true, completion: nil)
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel) { (alert : UIAlertAction!) in
         }
+        optionMenu.addAction(takePhoto)
+        optionMenu.addAction(sharePhoto)
+        optionMenu.addAction(cancelAction)
+        self.present(optionMenu, animated: true, completion: nil)
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         
-        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel) { (UIAlertAction) in }
+        let image = info[UIImagePickerControllerEditedImage] as! UIImage
         
-        alertController.addAction(cameraAction)
+        myImageView.image = image
         
-        alertController.addAction(libraryAction)
+        // image is our desired image
         
-        alertController.addAction(cancelAction)
-        
-        self.present(alertController, animated: true, completion:nil)
-            
+        picker.dismiss(animated: true, completion: nil)
     }
     
     
