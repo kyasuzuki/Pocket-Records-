@@ -153,14 +153,27 @@
                                 <state key="normal" title="My Canvas"/>
                                 <connections>
                                     <action selector="myCanvasButton:" destination="sC3-Nx-6gW" eventType="touchUpInside" id="sQr-js-u1Y"/>
-                                    <segue destination="EZL-K6-WVZ" kind="show" id="nAL-OF-W3q"/>
+                                    <segue destination="EZL-K6-WVZ" kind="show" identifier="showSavedCanvas" id="nAL-OF-W3q"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hZy-8y-Lq3">
+                                <rect key="frame" x="237" y="523" width="104" height="104"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="saved text..." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="iN7-zU-1bt">
+                                <rect key="frame" x="237" y="523" width="104" height="104"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="8"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
                         <outlet property="recordImage" destination="VQQ-1N-AP4" id="yyc-ng-7Q2"/>
+                        <outlet property="savedImage" destination="hZy-8y-Lq3" id="50j-eg-rFA"/>
+                        <outlet property="savedText" destination="iN7-zU-1bt" id="Kna-lF-rbq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pUg-oP-Fww" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -184,11 +197,6 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="draw"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="As5-84-wc1">
-                                <rect key="frame" x="105" y="611" width="46" height="48"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="type"/>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="chW-rC-5SK">
                                 <rect key="frame" x="235" y="619" width="42" height="28"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -204,16 +212,27 @@
                                 <state key="normal" title="Save">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="saveButton:" destination="EZL-K6-WVZ" eventType="touchUpInside" id="kKz-Kb-xVq"/>
+                                </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vMa-oo-UDn" userLabel="myImageView">
-                                <rect key="frame" x="27" y="101" width="303" height="466"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="547"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Op9-jQ-IlL">
+                                <rect key="frame" x="0.0" y="64" width="375" height="547"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
                         <outlet property="myImageView" destination="vMa-oo-UDn" id="xsO-hp-IhR"/>
+                        <outlet property="myTextField" destination="Op9-jQ-IlL" id="BrP-N4-ERi"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HoA-LX-XMQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -245,6 +264,5 @@
         <image name="pause" width="30" height="38"/>
         <image name="play" width="34" height="38"/>
         <image name="rewind" width="48" height="30"/>
-        <image name="type" width="64" height="64"/>
     </resources>
 </document>

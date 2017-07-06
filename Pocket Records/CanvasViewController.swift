@@ -8,16 +8,29 @@
 
 import UIKit
 
+protocol DataSentDelegate{
+    func userDidEnterData(data: String)
+}
+
 class CanvasViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
+    var delegate: DataSentDelegate? = nil
+    
+    private var selectedImage: UIImage?
+    
+    private var shadowImageView: UIImageView?
+    
+    // the controllwer for the popup that appears from the bottom when the user clicks the camera button
     let alertController = UIAlertController()
     
+    // The canvas element --> specifically for the image option
     @IBOutlet weak var myImageView: UIImageView!
     
     @IBAction func cameraButton(_ sender: UIButton) {
         cameraPopup()
     }
     
+    // the function to get the camera to open up or the photo library to open up if the user selects either option
     func cameraPopup() {
         let camera = CameraHandler(delegate_: self)
         let optionMenu = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
@@ -35,28 +48,86 @@ class CanvasViewController: UIViewController, UIImagePickerControllerDelegate, U
         optionMenu.addAction(sharePhoto)
         optionMenu.addAction(cancelAction)
         self.present(optionMenu, animated: true, completion: nil)
+        
     }
     
+    // this function goes along with the cameraPopup function; it just sets the selected image as the image on the imageView
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         
         let image = info[UIImagePickerControllerEditedImage] as! UIImage
         
         myImageView.image = image
-        
+        selectedImage = image
         // image is our desired image
         
         picker.dismiss(animated: true, completion: nil)
     }
     
+
+    @IBOutlet weak var myTextField: UITextView!
+    var text:String = ""
+    var masterView:SongPlayViewController!
+    
+    @IBAction func saveButton(_ sender: UIButton) {
+        if delegate != nil{
+            if myTextField.text != nil{
+                let data = myTextField.text
+                delegate?.userDidEnterData(data: data!)
+                self.navigationController?.popViewController(animated: true)
+                
+            }
+        }
+        
+    }
+    
     
     override func viewDidLoad(){
-               super.viewDidLoad()
-//              self.navigationController!.navigationBar.isHidden = true    
+        super.viewDidLoad()
+        myTextField.text = text
+        myTextField.becomeFirstResponder()
     }
+    
+    func setText(t:String) {
+        text = t
+        if isViewLoaded {
+            myTextField.text = t
+        }
+    }
+    
 
+    
+    // gets rid of hairline border line on navigation bar
+    private func findShadowImage(under view: UIView) -> UIImageView? {
+        if view is UIImageView && view.bounds.size.height <= 1 {
+            return (view as! UIImageView)
+        }
+        
+        for subview in view.subviews {
+            if let imageView = findShadowImage(under: subview) {
+                return imageView
+            }
+        }
+        return nil
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        if shadowImageView == nil {
+            shadowImageView = findShadowImage(under: navigationController!.navigationBar)
+        }
+        shadowImageView?.isHidden = true
+        navigationController?.navigationBar.barTintColor = UIColor .white
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        shadowImageView?.isHidden = false
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         }
-    
     
 }

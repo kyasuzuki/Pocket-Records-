@@ -9,13 +9,28 @@
 import UIKit
 import AVFoundation
 
-class SongPlayViewController: UIViewController {
+class SongPlayViewController: UIViewController, DataSentDelegate {
     
     @IBAction func myCanvasButton(_ sender: UIButton) {
     }
     
+    @IBOutlet weak var savedImage: UIImageView!
+    // receiving text field
+    @IBOutlet weak var savedText: UITextView!
     
-        @IBOutlet weak var recordImage: UIImageView!
+    func userDidEnterData(data: String) {
+        savedText.text = data
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showSavedCanvas"{
+            let canvasViewController:CanvasViewController = segue.destination as! CanvasViewController
+            canvasViewController.delegate = self
+                    }
+    }
+    
+    
+    @IBOutlet weak var recordImage: UIImageView!
     
     // get rid of hairline border for navigation bar
     private var shadowImageView: UIImageView?
@@ -48,11 +63,13 @@ class SongPlayViewController: UIViewController {
         shadowImageView?.isHidden = false
     }
 
-    
+    // initializing the audio player
     var audioPlayer: AVAudioPlayer! = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
+       
+    // setting the correct song to play according to which title the user selects
         if (navigationItem.title == "Time For Us"){
         do {
             audioPlayer = try AVAudioPlayer(contentsOf: URL.init(fileURLWithPath: Bundle.main.path(forResource: "TimeForUs", ofType: "mp3")!))
@@ -83,6 +100,7 @@ class SongPlayViewController: UIViewController {
                 print(error)
             }
         }
+        
     }
     
     override func didReceiveMemoryWarning() {
@@ -90,6 +108,7 @@ class SongPlayViewController: UIViewController {
         
     }
     
+    // the buttons for playing, pausing, and restarting each song
     @IBAction func Play(_ sender: UIButton) {
         audioPlayer.play()
     }
@@ -112,6 +131,8 @@ class SongPlayViewController: UIViewController {
             audioPlayer.play()
         }
     }
+    
+    
     
 }
 
