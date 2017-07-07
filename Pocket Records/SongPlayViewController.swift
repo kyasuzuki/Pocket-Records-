@@ -9,7 +9,9 @@
 import UIKit
 import AVFoundation
 
-class SongPlayViewController: UIViewController, DataSentDelegate {
+class SongPlayViewController: UIViewController
+    //DataSentDelegate
+{
     
     @IBAction func myCanvasButton(_ sender: UIButton) {
     }
@@ -18,16 +20,17 @@ class SongPlayViewController: UIViewController, DataSentDelegate {
     // receiving text field
     @IBOutlet weak var savedText: UITextView!
     
-    func userDidEnterData(data: String) {
-        savedText.text = data
-    }
+//    func userDidEnterData(data: Any) {
+//        savedText.text = data as? String
+//        savedImage.image = data as? UIImage
+//    }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "showSavedCanvas"{
-            let canvasViewController:CanvasViewController = segue.destination as! CanvasViewController
-            canvasViewController.delegate = self
-                    }
-    }
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        if segue.identifier == "showSavedCanvas"{
+//            let canvasViewController:CanvasViewController = segue.destination as! CanvasViewController
+//            canvasViewController.delegate = self
+//                    }
+//    }
     
     
     @IBOutlet weak var recordImage: UIImageView!
@@ -131,8 +134,6 @@ class SongPlayViewController: UIViewController, DataSentDelegate {
             audioPlayer.play()
         }
     }
-    
-    
     
 }
 

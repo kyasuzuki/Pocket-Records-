@@ -196,6 +196,9 @@
                                 <rect key="frame" x="171" y="611" width="43" height="39"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="draw"/>
+                                <connections>
+                                    <action selector="drawButton:" destination="EZL-K6-WVZ" eventType="touchUpInside" id="c59-hW-nzq"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="chW-rC-5SK">
                                 <rect key="frame" x="235" y="619" width="42" height="28"/>
@@ -220,17 +223,38 @@
                                 <rect key="frame" x="0.0" y="64" width="375" height="547"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Op9-jQ-IlL">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Op9-jQ-IlL" userLabel="myTextField">
                                 <rect key="frame" x="0.0" y="64" width="375" height="547"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="27"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hqq-CC-Gh1">
+                                <rect key="frame" x="94" y="609" width="55" height="49"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="type"/>
+                                <connections>
+                                    <action selector="textButton:" destination="EZL-K6-WVZ" eventType="touchUpInside" id="GVy-iG-bHT"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="S8o-W3-J7Z" userLabel="myDrawView">
+                                <rect key="frame" x="1" y="64" width="374" height="537"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vhk-fU-vBk">
+                                <rect key="frame" x="306" y="614" width="36" height="39"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="trash"/>
+                                <connections>
+                                    <action selector="trash:" destination="EZL-K6-WVZ" eventType="touchUpInside" id="Cda-Oo-262"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
+                        <outlet property="myDrawView" destination="S8o-W3-J7Z" id="AT2-S5-uHv"/>
                         <outlet property="myImageView" destination="vMa-oo-UDn" id="xsO-hp-IhR"/>
                         <outlet property="myTextField" destination="Op9-jQ-IlL" id="BrP-N4-ERi"/>
                     </connections>
@@ -264,5 +288,7 @@
         <image name="pause" width="30" height="38"/>
         <image name="play" width="34" height="38"/>
         <image name="rewind" width="48" height="30"/>
+        <image name="trash" width="36" height="50"/>
+        <image name="type" width="64" height="64"/>
     </resources>
 </document>
